@@ -3,7 +3,10 @@ import pygame
 
 class Screen:
     def __init__(self):
-        self.screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)
+        self.width = 1920
+        self.height = 1080
+        self.screen = pygame.display.set_mode(
+            (self.width, self.height), pygame.FULLSCREEN)
         self.running = True
 
     def load_image(self, path):
