@@ -3,4 +3,3 @@ class Player:
         self.name = name
         self.color = color
         self.score = score
-        self.active = False
