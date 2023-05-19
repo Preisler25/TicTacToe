@@ -1,11 +1,11 @@
 import pygame
-from page.login import login
+from page.game import game
 
 
 def main():
     pygame.init()
 
-    login()
+    game()
 
     pygame.quit()
     quit()

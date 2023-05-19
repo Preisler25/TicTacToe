@@ -1,21 +1,19 @@
 import pygame
 from appConst import screen, bg
-from comp.button import Button
+from comp.text_field import ShowActivPlayer
 
 
-def login():
+def game():
 
-    login_btn = Button(100, 100, 100, 100, "Login",
-                       (255, 255, 255), pygame.font.Font(None, 50), (0, 0, 0))
+    active_player_tf = ShowActivPlayer(
+        screen.width/2-screen.width/20, 0, screen.width/10, screen.height/20, "Player 1", (255, 255, 255), pygame.font.SysFont("Arial", 30), (0, 0, 0))
 
     running = True
     while running:
         screen.draw(bg)
-        login_btn.draw(screen.screen)
+        active_player_tf.draw(screen.screen)
 
         for event in pygame.event.get():
-
-            login_btn.update(event)
 
             if event.type == pygame.QUIT:
                 running = False
