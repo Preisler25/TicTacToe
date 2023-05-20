@@ -20,10 +20,12 @@ class MapButton(Button):
     def __str__(self) -> str:
         return f"MapButton {self.number}, rect: {self.rect}, color: {self.color}, was_set: {self.was_set}"
 
-    def draw(self, screen):
+    def draw(self, screen, player):
         if self.was_set:
-            self.surface.fill(self.color)
-        screen.blit(self.surface, self.rect)
+            self.surface.fill(player.color)
+            screen.blit(self.surface, self.rect)
+
+        
 
     def update(self, event, player, screen):
         if self.was_set:
