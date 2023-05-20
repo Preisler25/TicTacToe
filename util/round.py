@@ -9,8 +9,8 @@ class GameRound:
         self.player2 = player2
         self.game_round = game_round
         self.active_player = active_player
-        self.map = [MapButton((i % 3) * (screen.width/3), math.ceil(i/3) * (screen.height/3), screen.width/3, screen.height/3, i)
-                    for i in range(9)]
+        self.map = [MapButton((i % 3) * 300, math.floor(i / 3)
+                              * 300, 300, 300, i) for i in range(9)]
 
     def setingSquer(self, squer, player):
         self.map[squer] = player.color
@@ -33,4 +33,5 @@ class GameRound:
 
     def update(self, event):
         for i in self.map:
+            print(i)
             i.update(event, self.active_player)
