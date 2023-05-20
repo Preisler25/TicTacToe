@@ -3,3 +3,6 @@ class Player:
         self.name = name
         self.color = color
         self.score = score
+
+    def __str__(self) -> str:
+        return f"Player {self.name}, color: {self.color}, score: {self.score}"
