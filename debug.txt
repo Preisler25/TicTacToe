@@ -1,3 +1,4 @@
+(all pos)
 0, 0
 0, 300
 0, 600
@@ -8,6 +9,7 @@
 600, 300
 600, 600
 
+(All buttons)
 MapButton 0, rect: <rect(0, 0, 300, 300)>, color: (255, 0, 0), was_set: True
 MapButton 1, rect: <rect(300, 0, 300, 300)>, color: (255, 255, 255), was_set: False
 MapButton 2, rect: <rect(600, 0, 300, 300)>, color: (255, 255, 255), was_set: False
@@ -17,3 +19,26 @@ MapButton 5, rect: <rect(600, 300, 300, 300)>, color: (255, 255, 255), was_set: 
 MapButton 6, rect: <rect(0, 600, 300, 300)>, color: (255, 255, 255), was_set: False
 MapButton 7, rect: <rect(300, 600, 300, 300)>, color: (255, 255, 255), was_set: False
 MapButton 8, rect: <rect(600, 600, 300, 300)>, color: (255, 255, 255), was_set: False
+
+(pos)
+[
+    0, 1, 2,
+    3, 4, 5, 
+    6, 7, 8,
+]
+
+(index)
+[0, 1, 2, 3, 4, 5, 6, 7, 8]
+(vertival wins)             |   (index)
+[x, x, x, 0, 0, 0, 0, 0, 0] |  [0, 1, 2]
+[0, 0, 0, x, x, x, 0, 0, 0] |  [3, 4, 5]
+[0, 0, 0, 0, 0, 0, x, x, x] |  [6, 7, 8]
+(horizontal wins)           |   (index)
+[x, 0, 0, x, 0, 0, x, 0, 0] |  [0, 3, 6]
+[0, x, 0, 0, x, 0, 0, x, 0] |  [1, 4, 7]
+[0, 0, x, 0, 0, x, 0, 0, x] |  [2, 5, 8]
+(diagonal wins)             |   (index)
+[x, 0, 0, 0, x, 0, 0, 0, x] |  [0, 4, 8]
+[0, 0, x, 0, x, 0, x, 0, 0] |  [2, 4, 6]
+
+
