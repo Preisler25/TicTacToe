@@ -11,8 +11,9 @@ class Button:
 
 
 class MapButton(Button):
-    def __init__(self, x, y, width, height):
+    def __init__(self, x, y, width, height, number):
         super().__init__(x, y, width, height)
+        self.number = number
         self.color = (0, 0, 0)
         self.was_set = False
 
