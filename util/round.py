@@ -33,5 +33,4 @@ class GameRound:
 
     def update(self, event):
         for i in self.map:
-            print(i)
-            i.update(event, self.active_player)
+            i.update(event, self.active_player, screen.screen)

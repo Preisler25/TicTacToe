@@ -7,3 +7,13 @@
 600, 0
 600, 300
 600, 600
+
+MapButton 0, rect: <rect(0, 0, 300, 300)>, color: (255, 0, 0), was_set: True
+MapButton 1, rect: <rect(300, 0, 300, 300)>, color: (255, 255, 255), was_set: False
+MapButton 2, rect: <rect(600, 0, 300, 300)>, color: (255, 255, 255), was_set: False
+MapButton 3, rect: <rect(0, 300, 300, 300)>, color: (255, 255, 255), was_set: False
+MapButton 4, rect: <rect(300, 300, 300, 300)>, color: (255, 255, 255), was_set: False
+MapButton 5, rect: <rect(600, 300, 300, 300)>, color: (255, 255, 255), was_set: False
+MapButton 6, rect: <rect(0, 600, 300, 300)>, color: (255, 255, 255), was_set: False
+MapButton 7, rect: <rect(300, 600, 300, 300)>, color: (255, 255, 255), was_set: False
+MapButton 8, rect: <rect(600, 600, 300, 300)>, color: (255, 255, 255), was_set: False
