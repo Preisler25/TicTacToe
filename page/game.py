@@ -15,8 +15,7 @@ def game():
     active_player_tf = ShowActivPlayer(
         screen.width/2-screen.width/20, 0, screen.width/10, screen.height/20, game_round.active_player.name, (255, 255, 255), pygame.font.SysFont("Arial", 30), (0, 0, 0))
 
-    running = True
-    while running:
+    while game_round.game_over == False:
         screen.draw(bg)
         game_round.draw()
         active_player_tf.draw(screen.screen)
@@ -32,4 +31,4 @@ def game():
                     screen.quit()
         screen.update()
 
-    pygame.quit()
+    print("Game Over")

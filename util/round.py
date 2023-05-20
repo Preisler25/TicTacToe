@@ -1,6 +1,7 @@
 from comp.button import MapButton
 import math
 from appConst import screen
+from util.wins import checkWin
 
 
 class GameRound:
@@ -11,6 +12,7 @@ class GameRound:
         self.active_player = active_player
         self.map = [MapButton((i % 3) * screen.width/3, math.floor(i / 3)
                               * screen.height/3, screen.width/3, screen.height/3, i) for i in range(9)]
+        self.game_over = False
 
     def setingSquer(self, squer, player):
         self.map[squer] = player.color
@@ -24,7 +26,8 @@ class GameRound:
             self.active_player = self.player1
 
     def checkWin(self):
-        pass
+        if checkWin(self.map):
+            self.game_over = True
 
     def checkDraw(self):
         pass
