@@ -20,20 +20,19 @@ class MapButton(Button):
     def __str__(self) -> str:
         return f"MapButton {self.number}, rect: {self.rect}, color: {self.color}, was_set: {self.was_set}"
 
-    def draw(self, screen, player):
+    def draw(self, screen):
         if self.was_set:
-            self.surface.fill(player.color)
+            self.surface.fill(self.color)
             screen.blit(self.surface, self.rect)
 
         
 
-    def update(self, event, player, screen):
+    def update(self, event, player):
         if self.was_set:
             return
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-            print(event)
-            print(self.rect.collidepoint(event.pos))
             if self.rect.collidepoint(event.pos):
                 self.color = player.color
                 self.was_set = True
-                self.draw(screen)
+                return True
+

@@ -16,8 +16,10 @@ class GameRound:
         self.map[squer] = player.color
 
     def chActivePlayer(self):
+        print(self.active_player == self.player1)
         if self.active_player == self.player1:
-            self.active_player == self.player2
+            self.active_player = self.player2
+            print(self.active_player)
         else:
             self.active_player = self.player1
 
@@ -33,4 +35,6 @@ class GameRound:
 
     def update(self, event):
         for i in self.map:
-            i.update(event, self.active_player, screen.screen)
+            if i.update(event, self.active_player) == True:
+                print("True")
+                self.chActivePlayer()
