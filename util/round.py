@@ -1,11 +1,10 @@
 import math
 from comp.button import MapButton
-from appConst import screen
 from func.endGameFunc import checkWin, checkDraw
 
 
 class GameRound:
-    def __init__(self, player1, player2, game_round, active_player):
+    def __init__(self, player1, player2, game_round, active_player, screen):
         self.player1 = player1
         self.player2 = player2
         self.game_round = game_round
@@ -34,9 +33,9 @@ class GameRound:
         if checkDraw(self.map):
             self.round_over = True
 
-    def draw(self):
+    def draw(self, screen):
         for i in self.map:
-            i.draw(screen.screen)
+            i.draw(screen)
 
     def update(self, event):
         if self.round_over:

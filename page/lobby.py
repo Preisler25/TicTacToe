@@ -1,5 +1,5 @@
-from appConst import screen, bg, game_round
 import pygame
+from appConst import screen, bg, game_round
 from comp.button import Button
 
 
