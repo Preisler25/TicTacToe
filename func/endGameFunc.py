@@ -12,3 +12,11 @@ def checkWin(buttons):
                 print("Win")
                 return True
     return False
+
+
+def checkDraw(buttons):
+    temp = True
+    for i in buttons:
+        if i.was_set == False:
+            temp = False
+    return temp
