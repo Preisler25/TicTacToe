@@ -1,7 +1,6 @@
-from appConst import screen, bg
-from comp.button import Button
-from appConst import game_round
+from appConst import screen, bg, game_round
 import pygame
+from comp.button import Button
 
 
 def lobby():

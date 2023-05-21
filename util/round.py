@@ -1,7 +1,7 @@
+import math
 from comp.button import MapButton
 from appConst import screen
 from func.endGameFunc import checkWin, checkDraw
-import math
 
 
 class GameRound:

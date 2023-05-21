@@ -1,9 +1,6 @@
 from util.screen import Screen
 from util.player import Player
 from util.round import GameRound
-import pygame
-
-pygame.init()
 
 screen = Screen()
 bg = screen.load_image("src/lobby_bg.jpeg")
