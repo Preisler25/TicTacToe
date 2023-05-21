@@ -1,7 +1,7 @@
 from comp.button import MapButton
-import math
 from appConst import screen
 from func.endGameFunc import checkWin, checkDraw
+import math
 
 
 class GameRound:
@@ -12,6 +12,7 @@ class GameRound:
         self.active_player = active_player
         self.map = [MapButton((i % 3) * screen.width/3, math.floor(i / 3)
                               * screen.height/3, screen.width/3, screen.height/3, i) for i in range(9)]
+        self.rounds = 1
         self.round_over = False
         self.game_over = False
 
