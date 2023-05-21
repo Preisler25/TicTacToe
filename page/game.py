@@ -23,12 +23,10 @@ def game():
         for event in pygame.event.get():
             game_round.update(event)
             if event.type == pygame.QUIT:
-                running = False
-                screen.quit()
+                game_round.game_over = True
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
-                    running = False
-                    screen.quit()
+                    game_round.game_over = True
         screen.update()
 
     print("Game Over")

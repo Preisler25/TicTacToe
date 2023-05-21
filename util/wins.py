@@ -5,7 +5,7 @@ win_index = [
 ]
 
 
-def check_win(buttons):
+def checkWin(buttons):
     for index in win_index:
         if buttons[index[0]].was_set and buttons[index[1]].was_set and buttons[index[2]].was_set:
             if buttons[index[0]].color == buttons[index[1]].color and buttons[index[1]].color == buttons[index[2]].color:

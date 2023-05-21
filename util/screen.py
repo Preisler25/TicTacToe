@@ -7,7 +7,6 @@ class Screen:
         self.height = 1080
         self.screen = pygame.display.set_mode(
             (self.width, self.height), pygame.FULLSCREEN)
-        self.running = True
 
     def load_image(self, path):
         return pygame.image.load(path)
@@ -17,6 +16,3 @@ class Screen:
 
     def update(self):
         pygame.display.update()
-
-    def quit(self):
-        self.running = False
