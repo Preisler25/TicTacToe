@@ -21,6 +21,7 @@ def lobby():
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 if new_game_button.rect.collidepoint(event.pos):
                     game_round.rounds += 1
+                    game_round.reste(screen)
                     lobby = False
                 if quit_button.rect.collidepoint(event.pos):
                     game_round.game_over = True

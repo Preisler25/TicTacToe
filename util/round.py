@@ -37,6 +37,11 @@ class GameRound:
         for i in self.map:
             i.draw(screen)
 
+    def reset(self, screen):
+        self.round_over = False
+        self.map = [MapButton((i % 3) * screen.width/3, math.floor(i / 3)
+                              * screen.height/3, screen.width/3, screen.height/3, i) for i in range(9)]
+
     def update(self, event):
         if self.round_over:
             pass
