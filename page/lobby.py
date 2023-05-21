@@ -14,8 +14,8 @@ def lobby():
 
     while lobby:
         screen.draw(bg)
-        screen.draw(new_game_button)
-        screen.draw(quit_button)
+        new_game_button.draw(screen.screen)
+        quit_button.draw(screen.screen)
 
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:

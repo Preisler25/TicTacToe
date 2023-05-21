@@ -50,9 +50,3 @@ class PressButton(Button):
         self.surface.fill(self.bg_color)
         screen.blit(self.surface, self.rect)
         screen.blit(self.text_surface, self.text_rect)
-
-    def update(self, event):
-        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-            if self.rect.collidepoint(event.pos):
-                return True
-        return False
