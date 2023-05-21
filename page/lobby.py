@@ -1,16 +1,16 @@
 import pygame
 from appConst import screen, bg, game_round
-from comp.button import Button
+from comp.button import PressButton
 
 
 def lobby():
     lobby = True
 
-    new_game_button = Button(screen.width/2-screen.width/10, screen.height/2-screen.height/20,
-                             screen.width/5, screen.height/10, "New Game", (255, 255, 255), pygame.font.SysFont("Arial", 30), (0, 0, 0))
+    new_game_button = PressButton(screen.width/2-screen.width/10, screen.height/2-screen.height/20,
+                                  screen.width/5, screen.height/10, "New Game", (255, 255, 255), pygame.font.SysFont("Arial", 30), (0, 0, 0))
 
-    quit_button = Button(screen.width/2-screen.width/10, screen.height/2+screen.height/20,
-                         screen.width/5, screen.height/10, "Quit", (255, 255, 255), pygame.font.SysFont("Arial", 30), (0, 0, 0))
+    quit_button = PressButton(screen.width/2-screen.width/10, screen.height/2+screen.height/20,
+                              screen.width/5, screen.height/10, "Quit", (255, 255, 255), pygame.font.SysFont("Arial", 30), (0, 0, 0))
 
     while lobby:
         screen.draw(bg)
