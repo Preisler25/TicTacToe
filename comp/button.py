@@ -32,7 +32,6 @@ class MapButton(Button):
             if self.rect.collidepoint(event.pos):
                 self.color = player.color
                 self.was_set = True
-                print("set")
                 return True
 
 
